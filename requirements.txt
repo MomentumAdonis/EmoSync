@@ -4,3 +4,5 @@ scikit-learn
 matplotlib
 tensorflow-cpu
 boto3
+flask
+gunicorn
