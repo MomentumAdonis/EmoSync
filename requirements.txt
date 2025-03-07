@@ -3,8 +3,5 @@ pandas
 scikit-learn
 matplotlib
 tensorflow
-sys
-random
-matplotlib
 keras
 boto3
