@@ -1,2 +1,2 @@
-web: python -m http.server $PORT
+web: gunicorn app:app
 worker: python LoadAndPredict.py
