@@ -6,3 +6,5 @@ tensorflow-cpu
 boto3
 flask
 gunicorn
+dotenv
+json
