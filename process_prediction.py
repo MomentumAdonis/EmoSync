@@ -32,7 +32,7 @@ def map_va_to_emotion(valence, arousal, level1=0.2, level2=0.6):
 
     # Level 1: Very close to center means neutral
     if radius < level1:
-        return "Neutral/Indifferent"
+        return "Neutral"
 
     # Define labels for level 2 (8 groups, each 45°)
     level2_labels = [
@@ -47,18 +47,18 @@ def map_va_to_emotion(valence, arousal, level1=0.2, level2=0.6):
     ]
     # Define labels for level 3 (12 groups, each 30°)
     level3_labels = [
-        "Happy/Elated",
+        "Happy",
         "Delighted",
         "Excited",
-        "Tense/Afraid",
-        "Angry/Annoyed",
-        "Frustrated/Bitter/Upset",
-        "Depressed/Miserable",
+        "Tense",
+        "Angry",
+        "Frustrated",
+        "Depressed",
         "Bored",
-        "Tired/Sleepy",
+        "Tired",
         "Peaceful",
         "Relaxed",
-        "Content/Pleased"
+        "Content"
     ]
 
     if radius < level2:
