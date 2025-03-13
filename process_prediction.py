@@ -253,7 +253,7 @@ def prep_playback_sequence(emotion_df, minDuration=3.0):
         final_rows.append((start_t, emo))
     # Add final row for "Playback Completed"
     final_end = merged_segments[-1][1]  # end_t of last segment
-    final_rows.append((final_end, "Playback Completed"))
+    final_rows.append((final_end, "Completed"))
 
     final_df = pd.DataFrame(final_rows, columns=['start_time','emotion'])
 
