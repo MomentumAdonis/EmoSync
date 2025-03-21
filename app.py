@@ -67,7 +67,7 @@ def predict_endpoint():
     global prediction_method
 
     # If using the "precalculated" method, simply fetch the corresponding JSON file from S3.
-    if prediction_method == "precalculated":
+    if prediction_method == "tensorflow":
         json_s3_key = f"COMPLETED PLAYBACK STRINGS/{song_id}.json"
         local_json_path = f"/tmp/{song_id}.json"
         try:
