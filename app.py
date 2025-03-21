@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 # Global variable to select the prediction method.
 # Allowed values: "tensorflow", "precalculated", "ABC" (if implemented)
-prediction_method = "precalcualted"
+prediction_method = "tensorflow"
 
 # 1) Configuration via environment variables
 BUCKET_NAME = os.environ.get("S3_BUCKET_NAME", "emo-sync-data")
@@ -67,7 +67,7 @@ def predict_endpoint():
     global prediction_method
 
     # If using the "precalculated" method, simply fetch the corresponding JSON file from S3.
-    if prediction_method == "tensorflow":
+    if prediction_method == "precalculated":
         json_s3_key = f"COMPLETED PLAYBACK STRINGS/{song_id}.json"
         local_json_path = f"/tmp/{song_id}.json"
         try:
