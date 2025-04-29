@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 # Global variable to select the prediction method.
 # Allowed values: "tensorflow", "precalculated", "ABC" (if implemented)
-prediction_method = "tensorflow"
+prediction_method = "precalculated"
 
 # 1) Configuration via environment variables
 BUCKET_NAME = os.environ.get("S3_BUCKET_NAME", "emo-sync-data")
